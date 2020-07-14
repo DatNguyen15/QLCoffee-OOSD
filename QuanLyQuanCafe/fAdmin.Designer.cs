@@ -126,12 +126,6 @@
             this.btnViewBills = new System.Windows.Forms.Button();
             this.dtpkToDay = new System.Windows.Forms.DateTimePicker();
             this.tcAdmin = new System.Windows.Forms.TabControl();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.txtTable = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.buttonXoaBan = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabNhansu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhansu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMember)).BeginInit();
@@ -171,8 +165,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBills)).BeginInit();
             this.panel28.SuspendLayout();
             this.tcAdmin.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNhansu
@@ -616,7 +608,6 @@
             // 
             // tabTables
             // 
-            this.tabTables.Controls.Add(this.panel10);
             this.tabTables.Controls.Add(this.label5);
             this.tabTables.Controls.Add(this.panel18);
             this.tabTables.Location = new System.Drawing.Point(4, 30);
@@ -1171,65 +1162,6 @@
             this.tcAdmin.Size = new System.Drawing.Size(761, 471);
             this.tcAdmin.TabIndex = 0;
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.buttonXoaBan);
-            this.panel10.Location = new System.Drawing.Point(470, 55);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(293, 357);
-            this.panel10.TabIndex = 8;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.txtTable);
-            this.panel12.Controls.Add(this.label24);
-            this.panel12.Location = new System.Drawing.Point(3, 79);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(277, 36);
-            this.panel12.TabIndex = 13;
-            // 
-            // txtTable
-            // 
-            this.txtTable.Location = new System.Drawing.Point(130, 3);
-            this.txtTable.Name = "txtTable";
-            this.txtTable.Size = new System.Drawing.Size(139, 29);
-            this.txtTable.TabIndex = 1;
-            this.txtTable.Text = " ";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(3, 10);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 21);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Tên bàn:";
-            // 
-            // buttonXoaBan
-            // 
-            this.buttonXoaBan.BackColor = System.Drawing.Color.Azure;
-            this.buttonXoaBan.Location = new System.Drawing.Point(197, 15);
-            this.buttonXoaBan.Name = "buttonXoaBan";
-            this.buttonXoaBan.Size = new System.Drawing.Size(75, 47);
-            this.buttonXoaBan.TabIndex = 4;
-            this.buttonXoaBan.Text = "Xóa";
-            this.buttonXoaBan.UseVisualStyleBackColor = false;
-            this.buttonXoaBan.Click += new System.EventHandler(this.buttonXoaBan_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Azure;
-            this.button2.Location = new System.Drawing.Point(116, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 47);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1298,9 +1230,6 @@
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
             this.tcAdmin.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1404,11 +1333,5 @@
         private System.Windows.Forms.Button btnViewBills;
         private System.Windows.Forms.DateTimePicker dtpkToDay;
         private System.Windows.Forms.TabControl tcAdmin;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox txtTable;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button buttonXoaBan;
     }
 }

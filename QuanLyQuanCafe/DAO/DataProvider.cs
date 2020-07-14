@@ -11,7 +11,7 @@ namespace QuanLyQuanCafe.DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionStr = @"Data Source=(localDB);Initial Catalog=QuanLyQuanCafe;User ID=sa;Password=thanhdat";
+        private string connectionStr = @"Data Source=(local);Initial Catalog=QuanLyQuanCafe;User ID=sa;Password=thanhdat";
 
         public static DataProvider Instance
         {

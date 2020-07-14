@@ -10,7 +10,7 @@ namespace QuanLyQuanCafe.DAO
 {
     class MY_DB
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localDB);Initial Catalog=QuanLyQuanCafe;User ID=sa;Password=thanhdat");
+        SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QuanLyQuanCafe;User ID=sa;Password=thanhdat");
 
         public SqlConnection getConnection
         {

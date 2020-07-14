@@ -29,12 +29,10 @@ namespace QuanLyQuanCafe.DAO
         private AccountDAO() { }
         public bool checkLogin(string userName, string passWord)
         {
-            string query = string.Format("select * from F_Login ('{0}','{1}')",userName,passWord);
+            string query = "select	* from Account where userName = N'"+userName+"' And passWord = N'"+passWord+" '";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             Globals.setGlobalsUserName(result.Rows[0][0].ToString());
             return result.Rows.Count > 0;
-
-
         }
         public bool UpdateAccount(string userName, string dis, string pass, string newpass)
         {
@@ -44,7 +42,7 @@ namespace QuanLyQuanCafe.DAO
         }
         public Account GetAccountByUserName(string userName)
         {
-            string query = "Select * from account where userName = N'" + userName + "'";
+            string query = "Select * from Account where userName = N'" + userName + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -81,17 +79,24 @@ namespace QuanLyQuanCafe.DAO
             return result > 0;
         }
         public DataTable getAccount(string username)
-        {          
-            string query = string.Format("select * from F_GetAccount(N'{0}')",username);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
+        {
+            MY_DB mydb = new MY_DB();
+            SqlCommand command = new SqlCommand("select * from Account where userName=@us", mydb.getConnection);
+            command.Parameters.Add("@us", SqlDbType.NVarChar).Value = username;
+            SqlDataAdapter adap = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adap.Fill(table);
+            return table;
+
         }
         public DataTable GetAccountNoMember()
         {
-           
-            string query = "select * from F_GetAccountNoMember()";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
+            MY_DB mydb = new MY_DB();
+            SqlCommand command = new SqlCommand(" SELECT Account.userName FROM Account  EXCEPT SELECT Account.userName FROM Account, Member WHERE Member.username = Account.userName ", mydb.getConnection);
+            SqlDataAdapter adap = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adap.Fill(table);
+            return table;
         }
     }
 }

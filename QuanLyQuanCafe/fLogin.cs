@@ -54,9 +54,9 @@ namespace QuanLyQuanCafe
                     {
                         Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
 
-                        fTableManager fT = new fTableManager(loginAccount);
+                        fTableManager ft = new fTableManager(loginAccount);
                         this.Hide();
-                        fT.ShowDialog();
+                        ft.ShowDialog();
                         this.Show();
                     }
                     else

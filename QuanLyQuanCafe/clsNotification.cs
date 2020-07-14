@@ -9,7 +9,7 @@ namespace QuanLyQuanCafe
 {
     class clsNotification : IDisposable
     {
-        private string connectionString = @"Data Source=DESKTOP-IF5CCEF;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        private string connectionString = @"Data Source=(local);Initial Catalog=QuanLyQuanCafe;User ID=sa;Password=thanhdat";
 
         private string command;
         private Action Act;

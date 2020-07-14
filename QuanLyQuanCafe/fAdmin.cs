@@ -206,25 +206,24 @@ namespace QuanLyQuanCafe
                 MessageBox.Show("Thêm loại món ăn thất bại", "Thất bại");
             }
             loadCategory();
-        }      
+        }
         void addTable(string name)
         {
             try
             {
                 if (TableLoadDAO.Instance.INsertTable(name))
                 {
-                    MessageBox.Show("Thêm bàn thành công", "Thành công");
+                    MessageBox.Show("Thêm Loại món ăn thành công", "Thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm bàn thất bại", "Thất bại");
+                    MessageBox.Show("Thêm loại món ăn thất bại", "Thất bại");
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Thêm bàn thất bại 2", "Thất bại");
+                MessageBox.Show("Thêm loại món ăn thất bại", "Thất bại");
             }
-            loadListTable();
         }
         #endregion
 
@@ -609,15 +608,6 @@ namespace QuanLyQuanCafe
             this.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string ban = txtTable.Text;
-            addTable(ban);
-        }
-
-        private void buttonXoaBan_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

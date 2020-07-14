@@ -38,7 +38,7 @@ namespace QuanLyQuanCafe.DAO
 
         public DataTable GetCategoryForAdmin()
         {
-            string query = "select * from F_GetTableCategoryFood()";
+            string query = "Select * from FoodCategory";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

@@ -441,7 +441,35 @@ namespace QuanLyQuanCafe
         }
 
         //moi
-       
+        private void exportText(int id)
+        {
+
+            TextWriter writer = new StreamWriter(@"D:\output.txt");
+            writer.WriteLine("-----------Retaurant Bill-----------");
+
+            lvBill.Items.Clear();
+            List<Show> listBillInfo = ShowMenuDAO.Instance.GetShowByIdTable(id);
+            float totalPrice = 0;
+
+            foreach (Show item in listBillInfo)
+            {
+                
+                writer.WriteLine("---" +item.FoodName.ToString() +" :  "+item.Count.ToString()+"     "+item.Price.ToString()+"       "+item.TotalPrice.ToString());
+                 //lvItem.SubItems.Add(item.Count.ToString());
+                 //lvItem.SubItems.Add(item.Price.ToString());
+                 //lvItem.SubItems.Add(item.TotalPrice.ToString());
+                totalPrice += item.TotalPrice;
+
+               
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            string total = totalPrice.ToString("c", culture);
+            writer.WriteLine("-------------------------------------");
+            writer.WriteLine("                   Tổng: "+total);
+
+            writer.Close();
+            MessageBox.Show("File Saved!");
+        }
 
 
         #endregion

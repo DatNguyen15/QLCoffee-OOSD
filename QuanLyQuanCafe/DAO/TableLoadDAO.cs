@@ -39,7 +39,7 @@ namespace QuanLyQuanCafe.DAO
         {
             List<Table> tableList = new List<Table>();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("exec USP_GetTableList");
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableList");
 
             foreach (DataRow row in data.Rows)
             {
@@ -55,15 +55,13 @@ namespace QuanLyQuanCafe.DAO
         }
         public bool INsertTable(string name)
         {
-            //string query = string.Form("exec USP_InsetTable @name", new object[] { name }); 
-            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_InsetTable @name", new object[] { name });
+            string query = string.Format("Insert dbo.TableFood (nameTable , statusTable) values ( N'{0}' , N'Trống')");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
-            // DataProvider.Instance.ExecuteQuery("USP_InsetTable @name", new object[] { name });
-            //return true;
         }
         public DataTable getTableForAdmin()
         {
-            return DataProvider.Instance.ExecuteQuery("select * from V_GetTableForAdmin");
+            return DataProvider.Instance.ExecuteQuery("select * from TableFood");
         }
     }
 }
