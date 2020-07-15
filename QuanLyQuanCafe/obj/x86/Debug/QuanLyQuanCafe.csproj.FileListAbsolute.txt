@@ -12,3 +12,17 @@ B:\OOSD\thanhphat1125-master\NguyenNhatTruong_17110246_Tran_Thanh_Phat_17110206\
 B:\OOSD\thanhphat1125-master\NguyenNhatTruong_17110246_Tran_Thanh_Phat_17110206\ProgramServer\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
 B:\OOSD\thanhphat1125-master\NguyenNhatTruong_17110246_Tran_Thanh_Phat_17110206\ProgramServer\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.exe
 B:\OOSD\thanhphat1125-master\NguyenNhatTruong_17110246_Tran_Thanh_Phat_17110206\ProgramServer\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.pdb
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.csprojAssemblyReference.cache
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.csproj.ResolveComReference.cache
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.fAccount.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.fAdmin.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.fLogin.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.fSearchFood.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.fTableManager.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.Properties.Resources.resources
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.exe
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\obj\x86\Debug\QuanLyQuanCafe.pdb
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\bin\x86\Debug\QuanLyQuanCafe.exe.config
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\bin\x86\Debug\QuanLyQuanCafe.exe
+B:\Git\QLCoffee-OOSD\QuanLyQuanCafe\bin\x86\Debug\QuanLyQuanCafe.pdb

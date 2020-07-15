@@ -65,6 +65,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmUDdiscount)).BeginInit();
@@ -159,6 +160,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.btnCheckOut);
             this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.label3);
@@ -184,7 +186,7 @@
             // txbTotalPrice
             // 
             this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.Location = new System.Drawing.Point(225, 32);
+            this.txbTotalPrice.Location = new System.Drawing.Point(105, 32);
             this.txbTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
@@ -200,9 +202,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(16, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 21);
+            this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Tổng tiền (chưa giảm giá):";
+            this.label3.Text = "Tổng tiền:";
             // 
             // cbSwitchTable
             // 
@@ -232,7 +234,7 @@
             // 
             this.btnDiscount.BackColor = System.Drawing.Color.Azure;
             this.btnDiscount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiscount.Location = new System.Drawing.Point(429, 210);
+            this.btnDiscount.Location = new System.Drawing.Point(428, 210);
             this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(122, 47);
@@ -468,6 +470,17 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(304, 35);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(71, 21);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Sự Kiện";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // fTableManager
             // 
             this.AcceptButton = this.btnCheckOut;
@@ -543,5 +556,6 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem1;
         private System.Windows.Forms.Button XuatHoaDon;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

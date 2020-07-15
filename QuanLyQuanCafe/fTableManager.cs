@@ -32,6 +32,8 @@ namespace QuanLyQuanCafe
             loadComboBoxTable(cbPutTogether);
             clsNotification cls = new clsNotification(setData, command);
             cls.loadData();
+            btnDiscount.Visible = false;
+            nmUDdiscount.Visible = false;
         }
         #region Variable
         private int IDCategory = 0;
@@ -74,18 +76,17 @@ namespace QuanLyQuanCafe
                 foreach (Table item in listTable)
                 {
                     Button bt = new Button() { Width = Table.width, Height = Table.height };
-                    if (item.StatusTable == "trống") item.StatusTable = "Trống";
+                    StatePattern.TableContext context = new StatePattern.TableContext();
+                    context.setState(item.StatusTable);
+                    // if (context.AppleState()) item.StatusTable = "Trống";
                     bt.Text = item.NameTable + Environment.NewLine + item.StatusTable;
                     //Show bill by a click on the button:
                     bt.Click += Bt_Click;
                     bt.Tag = item;
 
-                    switch (item.StatusTable)
+                    switch (context.AppleState())
                     {
-                        case "Trống":
-                            bt.BackColor = Color.LightBlue;
-                            break;
-                        case "trống":
+                        case false:
                             bt.BackColor = Color.LightBlue;
                             break;
                         default:
@@ -331,27 +332,54 @@ namespace QuanLyQuanCafe
         private async void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table tb = lvBill.Tag as Table;
+            StrateryPattern.PayList pay = new StrateryPattern.PayList();
             try
             {
                 int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(tb.ID);
                 int discount = (int)nmUDdiscount.Value;
+                if (checkBox1.Checked)
+                {
+                    
+                    pay.setPay(new StrateryPattern.ThanhVien());
 
-                float finalyTotalPrice = TTP - (TTP / 100) * discount;
+                }
+                else
+                {
+                    pay.setPay(new StrateryPattern.BinhThuong());
+                }
+                float finalyTotalPrice = pay.pay(TTP,discount);    // TTP - (TTP / 100) * discount;
 
                 if (idBill != -1)
                 {
-                    
-                    if (MessageBox.Show(string.Format("Bạn muốn thanh toán hóa đơn {0}, với mức giảm giá {1}%?", tb.NameTable, discount), "Thanh toán thành công", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    if (checkBox1.Checked)
                     {
-                        
-                        MessageBox.Show(string.Format("Số tiền hóa đơn của {0} sau khi giảm giá {1}% là:\n\n \t\t{2} VND", tb.NameTable, discount, finalyTotalPrice), "Thanh toán thành công", MessageBoxButtons.OK);
-                       
-                        //exportText(tb.ID);
+                        if (MessageBox.Show(string.Format("Bạn muốn thanh toán hóa đơn {0}, với mức giảm giá {1}%?", tb.NameTable, discount), "Thanh toán thành công", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                        {
 
-                        
-                        //string saveExcelFile = @"D:\excel_report.xlsx";
-                        BillDAO.Instance.CheckOut(idBill, discount, finalyTotalPrice);
-                        ShowBill(tb.ID);
+                            MessageBox.Show(string.Format("Số tiền hóa đơn của {0} sau khi giảm giá {1}% là:\n\n \t\t{2} VND", tb.NameTable, discount, finalyTotalPrice), "Thanh toán thành công", MessageBoxButtons.OK);
+
+                            //exportText(tb.ID);
+
+
+                            //string saveExcelFile = @"D:\excel_report.xlsx";
+                            BillDAO.Instance.CheckOut(idBill, discount, finalyTotalPrice);
+                            ShowBill(tb.ID);
+                        }
+                    }
+                    else
+                    {
+                        if (MessageBox.Show(string.Format("Bạn muốn thanh toán hóa đơn {0}?", tb.NameTable, discount), "Thanh toán thành công", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                        {
+
+                            MessageBox.Show(string.Format("Số tiền hóa đơn của {0}:\n\n \t\t{2} VND", tb.NameTable, discount, finalyTotalPrice), "Thanh toán thành công", MessageBoxButtons.OK);
+
+                            //exportText(tb.ID);
+
+
+                            //string saveExcelFile = @"D:\excel_report.xlsx";
+                            BillDAO.Instance.CheckOut(idBill, discount, finalyTotalPrice);
+                            ShowBill(tb.ID);
+                        }
                     }
                 }
                 else
@@ -444,7 +472,7 @@ namespace QuanLyQuanCafe
         private void exportText(int id)
         {
 
-            TextWriter writer = new StreamWriter(@"D:\output.txt");
+            TextWriter writer = new StreamWriter(@"B:\output.txt");
             writer.WriteLine("-----------Retaurant Bill-----------");
 
             lvBill.Items.Clear();
@@ -491,7 +519,7 @@ namespace QuanLyQuanCafe
                 int discount = (int)nmUDdiscount.Value;
                 float finalyTotalPrice = TTP - (TTP / 100) * discount;
                 {
-                    using (TextWriter tw = new StreamWriter(@"D:\output.txt"))
+                    using (TextWriter tw = new StreamWriter(@"B:\output.txt"))
                     {
 
                         await tw.WriteLineAsync(btnTableChooseCurrent.Text);
@@ -516,6 +544,21 @@ namespace QuanLyQuanCafe
         {
             Thread thread = new Thread(loadTable);
             thread.Start();
+        }
+
+    
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                btnDiscount.Visible = true;
+                nmUDdiscount.Visible = true;
+            }else
+            {
+                btnDiscount.Visible = false;
+                nmUDdiscount.Visible = false;
+            }
         }
     }
 }
