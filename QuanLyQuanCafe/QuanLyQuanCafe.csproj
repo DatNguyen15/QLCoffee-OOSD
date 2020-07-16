@@ -177,12 +177,14 @@
     <None Include="Resources\btw-icon-cafe.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save.png" />
     <None Include="Resources\login.png" />
     <None Include="Resources\tải xuống.png" />
     <None Include="Resources\Untitled.png" />
     <None Include="Resources\b97dc288d71e7938c1ce8b7faacdc9ac.gif" />
     <None Include="Resources\bo-2-tranh-trang-tri-quan-ca-phe-W410-3.jpg" />
     <None Include="Resources\bo_7_tranh_i_love_cafe.jpg" />
+    <None Include="Resources\giphy.gif" />
     <Content Include="Resources\iconpng.png" />
   </ItemGroup>
   <ItemGroup>

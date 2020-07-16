@@ -121,6 +121,9 @@
   <data name="b97dc288d71e7938c1ce8b7faacdc9ac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b97dc288d71e7938c1ce8b7faacdc9ac.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bo-2-tranh-trang-tri-quan-ca-phe-W410-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo-2-tranh-trang-tri-quan-ca-phe-W410-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bo_7_tranh_i_love_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_7_tranh_i_love_cafe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,16 +133,19 @@
   <data name="iconpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bo-2-tranh-trang-tri-quan-ca-phe-W410-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bo-2-tranh-trang-tri-quan-ca-phe-W410-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tải xuống" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btw_icon_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btw-icon-cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tải xuống" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tải xuống.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

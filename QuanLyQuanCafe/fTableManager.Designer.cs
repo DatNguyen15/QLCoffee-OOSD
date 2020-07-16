@@ -39,6 +39,7 @@
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmUDdiscount)).BeginInit();
@@ -77,7 +77,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -93,9 +93,9 @@
             // 
             // adminToolStripMenuItem
             // 
-            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(135, 25);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(149, 25);
             this.adminToolStripMenuItem.Text = "Tài khoản admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -104,22 +104,24 @@
             this.thôngTinTàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
-            this.thôngTinTàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thôngTinTàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(156, 25);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(172, 25);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
+            this.thôngTinCáNhânToolStripMenuItem.BackColor = System.Drawing.Color.DarkOrange;
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
+            this.đăngXuấtToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -129,32 +131,35 @@
             this.thêmMónToolStripMenuItem,
             this.thanhToánToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem1});
-            this.phímTắtToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phímTắtToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phímTắtToolStripMenuItem.Name = "phímTắtToolStripMenuItem";
-            this.phímTắtToolStripMenuItem.Size = new System.Drawing.Size(80, 25);
+            this.phímTắtToolStripMenuItem.Size = new System.Drawing.Size(87, 25);
             this.phímTắtToolStripMenuItem.Text = "Phím tắt";
             // 
             // thêmMónToolStripMenuItem
             // 
+            this.thêmMónToolStripMenuItem.BackColor = System.Drawing.Color.DarkOrange;
             this.thêmMónToolStripMenuItem.Name = "thêmMónToolStripMenuItem";
             this.thêmMónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
             this.thêmMónToolStripMenuItem.Text = "Thêm món";
             this.thêmMónToolStripMenuItem.Click += new System.EventHandler(this.thêmMónToolStripMenuItem_Click);
             // 
             // thanhToánToolStripMenuItem
             // 
+            this.thanhToánToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
             this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
             this.thanhToánToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
             this.thanhToánToolStripMenuItem.Text = "Thanh toán";
             this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem1
             // 
+            this.thôngTinTàiKhoảnToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.thôngTinTàiKhoảnToolStripMenuItem1.Name = "thôngTinTàiKhoảnToolStripMenuItem1";
             this.thôngTinTàiKhoảnToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(270, 26);
+            this.thôngTinTàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(289, 26);
             this.thôngTinTàiKhoảnToolStripMenuItem1.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem1_Click);
             // 
@@ -164,17 +169,31 @@
             this.panel3.Controls.Add(this.btnCheckOut);
             this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(443, 514);
+            this.panel3.Location = new System.Drawing.Point(443, 512);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(563, 76);
             this.panel3.TabIndex = 3;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.checkBox1.Location = new System.Drawing.Point(298, 28);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 29);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Sự Kiện";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // btnCheckOut
             // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.Location = new System.Drawing.Point(429, 12);
+            this.btnCheckOut.BackColor = System.Drawing.Color.Red;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.Location = new System.Drawing.Point(429, 17);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(120, 46);
@@ -186,7 +205,7 @@
             // txbTotalPrice
             // 
             this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.Location = new System.Drawing.Point(105, 32);
+            this.txbTotalPrice.Location = new System.Drawing.Point(105, 30);
             this.txbTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
@@ -199,10 +218,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 33);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(6, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
+            this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Tổng tiền:";
             // 
@@ -219,7 +239,8 @@
             // 
             // btnSwitchTable
             // 
-            this.btnSwitchTable.BackColor = System.Drawing.Color.Azure;
+            this.btnSwitchTable.BackColor = System.Drawing.Color.LightCyan;
+            this.btnSwitchTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSwitchTable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSwitchTable.Location = new System.Drawing.Point(429, 7);
             this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -232,14 +253,15 @@
             // 
             // btnDiscount
             // 
-            this.btnDiscount.BackColor = System.Drawing.Color.Azure;
+            this.btnDiscount.BackColor = System.Drawing.Color.LightCyan;
+            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiscount.Location = new System.Drawing.Point(428, 210);
             this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(122, 47);
             this.btnDiscount.TabIndex = 6;
-            this.btnDiscount.Text = "Giảm giá (%)";
+            this.btnDiscount.Text = "Giảm Giá (%)";
             this.btnDiscount.UseVisualStyleBackColor = false;
             // 
             // nmUDdiscount
@@ -275,6 +297,7 @@
             // btnTableChooseCurrent
             // 
             this.btnTableChooseCurrent.BackColor = System.Drawing.Color.LightCyan;
+            this.btnTableChooseCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTableChooseCurrent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTableChooseCurrent.Location = new System.Drawing.Point(3, 7);
             this.btnTableChooseCurrent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -287,10 +310,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(143, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 21);
+            this.label2.Size = new System.Drawing.Size(91, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Thành tiền:";
             // 
@@ -311,11 +335,6 @@
             this.nmUDfoodCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmUDfoodCount.Location = new System.Drawing.Point(431, 70);
             this.nmUDfoodCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.nmUDfoodCount.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
             this.nmUDfoodCount.Name = "nmUDfoodCount";
             this.nmUDfoodCount.Size = new System.Drawing.Size(123, 29);
             this.nmUDfoodCount.TabIndex = 3;
@@ -329,14 +348,16 @@
             // 
             // btnAddFood
             // 
-            this.btnAddFood.BackColor = System.Drawing.Color.Azure;
-            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFood.Location = new System.Drawing.Point(431, 7);
             this.btnAddFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(123, 54);
             this.btnAddFood.TabIndex = 2;
-            this.btnAddFood.Text = "Thêm món";
+            this.btnAddFood.Text = "Thêm Món";
             this.btnAddFood.UseVisualStyleBackColor = false;
             this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
@@ -379,7 +400,8 @@
             // 
             // XuatHoaDon
             // 
-            this.XuatHoaDon.BackColor = System.Drawing.Color.Azure;
+            this.XuatHoaDon.BackColor = System.Drawing.Color.YellowGreen;
+            this.XuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.XuatHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XuatHoaDon.Location = new System.Drawing.Point(432, 305);
             this.XuatHoaDon.Name = "XuatHoaDon";
@@ -401,19 +423,21 @@
             // 
             // btnPutTogether
             // 
-            this.btnPutTogether.BackColor = System.Drawing.Color.Azure;
+            this.btnPutTogether.BackColor = System.Drawing.Color.LightCyan;
+            this.btnPutTogether.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPutTogether.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPutTogether.Location = new System.Drawing.Point(429, 104);
             this.btnPutTogether.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPutTogether.Name = "btnPutTogether";
             this.btnPutTogether.Size = new System.Drawing.Size(122, 47);
             this.btnPutTogether.TabIndex = 9;
-            this.btnPutTogether.Text = "Gộp bàn";
+            this.btnPutTogether.Text = "Gộp Bill";
             this.btnPutTogether.UseVisualStyleBackColor = false;
             this.btnPutTogether.Click += new System.EventHandler(this.btnPutTogether_Click);
             // 
             // lvBill
             // 
+            this.lvBill.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -434,12 +458,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên món";
-            this.columnHeader1.Width = 139;
+            this.columnHeader1.Width = 130;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 54;
+            this.columnHeader2.Width = 82;
             // 
             // columnHeader3
             // 
@@ -449,13 +473,13 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 70;
+            this.columnHeader4.Width = 112;
             // 
             // flpTable
             // 
             this.flpTable.AutoScroll = true;
             this.flpTable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flpTable.Location = new System.Drawing.Point(15, 33);
+            this.flpTable.Location = new System.Drawing.Point(15, 39);
             this.flpTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(409, 459);
@@ -463,30 +487,20 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(82, 499);
+            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.giphy;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 447);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(304, 35);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 21);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Sự Kiện";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // fTableManager
             // 
             this.AcceptButton = this.btnCheckOut;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1006, 593);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flpTable);

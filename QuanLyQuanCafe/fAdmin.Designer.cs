@@ -220,22 +220,26 @@
             // 
             // buttonDeleteMember
             // 
+            this.buttonDeleteMember.BackColor = System.Drawing.Color.Red;
+            this.buttonDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteMember.Location = new System.Drawing.Point(449, 390);
             this.buttonDeleteMember.Name = "buttonDeleteMember";
             this.buttonDeleteMember.Size = new System.Drawing.Size(84, 37);
             this.buttonDeleteMember.TabIndex = 120;
             this.buttonDeleteMember.Text = "Xóa ";
-            this.buttonDeleteMember.UseVisualStyleBackColor = true;
+            this.buttonDeleteMember.UseVisualStyleBackColor = false;
             this.buttonDeleteMember.Click += new System.EventHandler(this.buttonDeleteMember_Click);
             // 
             // buttonAddMember
             // 
+            this.buttonAddMember.BackColor = System.Drawing.Color.Aqua;
+            this.buttonAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddMember.Location = new System.Drawing.Point(189, 390);
             this.buttonAddMember.Name = "buttonAddMember";
             this.buttonAddMember.Size = new System.Drawing.Size(82, 37);
             this.buttonAddMember.TabIndex = 119;
             this.buttonAddMember.Text = "Thêm";
-            this.buttonAddMember.UseVisualStyleBackColor = true;
+            this.buttonAddMember.UseVisualStyleBackColor = false;
             this.buttonAddMember.Click += new System.EventHandler(this.buttonAddMember_Click);
             // 
             // btnUploadImage
@@ -250,12 +254,14 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.Location = new System.Drawing.Point(316, 390);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 37);
             this.btnEdit.TabIndex = 117;
             this.btnEdit.Text = "Sửa ";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dateTimePicker1
@@ -440,7 +446,8 @@
             // 
             // btnEditAccount
             // 
-            this.btnEditAccount.BackColor = System.Drawing.Color.Azure;
+            this.btnEditAccount.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnEditAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditAccount.Location = new System.Drawing.Point(173, 7);
             this.btnEditAccount.Name = "btnEditAccount";
             this.btnEditAccount.Size = new System.Drawing.Size(75, 34);
@@ -451,7 +458,8 @@
             // 
             // btnDeleteAccount
             // 
-            this.btnDeleteAccount.BackColor = System.Drawing.Color.Azure;
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteAccount.Location = new System.Drawing.Point(317, 7);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(75, 34);
@@ -462,7 +470,8 @@
             // 
             // btnAddAccount
             // 
-            this.btnAddAccount.BackColor = System.Drawing.Color.Azure;
+            this.btnAddAccount.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddAccount.Location = new System.Drawing.Point(37, 7);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(75, 34);
@@ -716,7 +725,8 @@
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.BackColor = System.Drawing.Color.Azure;
+            this.btnAddCategory.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCategory.Location = new System.Drawing.Point(197, 15);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(75, 47);
@@ -858,7 +868,8 @@
             // 
             // btnEditFoods
             // 
-            this.btnEditFoods.BackColor = System.Drawing.Color.Azure;
+            this.btnEditFoods.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnEditFoods.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditFoods.Location = new System.Drawing.Point(108, 9);
             this.btnEditFoods.Name = "btnEditFoods";
             this.btnEditFoods.Size = new System.Drawing.Size(75, 35);
@@ -869,7 +880,8 @@
             // 
             // btnAddFoods
             // 
-            this.btnAddFoods.BackColor = System.Drawing.Color.Azure;
+            this.btnAddFoods.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddFoods.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddFoods.Location = new System.Drawing.Point(27, 9);
             this.btnAddFoods.Name = "btnAddFoods";
             this.btnAddFoods.Size = new System.Drawing.Size(75, 35);
@@ -880,7 +892,8 @@
             // 
             // btnDeleteFoods
             // 
-            this.btnDeleteFoods.BackColor = System.Drawing.Color.Azure;
+            this.btnDeleteFoods.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteFoods.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteFoods.Location = new System.Drawing.Point(189, 9);
             this.btnDeleteFoods.Name = "btnDeleteFoods";
             this.btnDeleteFoods.Size = new System.Drawing.Size(75, 35);
@@ -1056,10 +1069,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(426, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 21);
+            this.label13.Size = new System.Drawing.Size(95, 23);
             this.label13.TabIndex = 2;
             this.label13.Text = "Tổng tiền:";
             // 

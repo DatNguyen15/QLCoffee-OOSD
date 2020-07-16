@@ -113,8 +113,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Coral;
+            this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(398, 452);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -127,7 +128,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.LightGreen;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(196, 452);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -343,25 +345,29 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(386, 499);
+            this.btnEdit.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Location = new System.Drawing.Point(144, 489);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(153, 57);
             this.btnEdit.TabIndex = 98;
             this.btnEdit.Text = "Cập nhật";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(220, 499);
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Location = new System.Drawing.Point(422, 489);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(156, 57);
             this.btnCancel.TabIndex = 97;
             this.btnCancel.Text = "Thoát";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // dateTimePicker1

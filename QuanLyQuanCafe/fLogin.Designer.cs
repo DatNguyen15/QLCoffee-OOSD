@@ -57,11 +57,12 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.LightBlue;
+            this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(196, 93);
+            this.btnExit.Location = new System.Drawing.Point(214, 93);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(101, 33);
             this.btnExit.TabIndex = 4;
@@ -71,10 +72,11 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.LightBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.SpringGreen;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(66, 93);
+            this.btnLogin.Location = new System.Drawing.Point(28, 93);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(110, 33);
             this.btnLogin.TabIndex = 3;

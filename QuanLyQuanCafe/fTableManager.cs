@@ -87,10 +87,10 @@ namespace QuanLyQuanCafe
                     switch (context.AppleState())
                     {
                         case false:
-                            bt.BackColor = Color.LightBlue;
+                            bt.BackColor = Color.LightGreen;
                             break;
                         default:
-                            bt.BackColor = Color.Aqua;
+                            bt.BackColor = Color.Red;
                             break;
                     }
                     flpTable.Controls.Add(bt);
