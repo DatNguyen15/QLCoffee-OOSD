@@ -407,6 +407,7 @@ namespace QuanLyQuanCafe
         {
             try
             {
+                
                 if ((cbSwitchTable.SelectedItem as Table).NameTable == btnTableChooseCurrent.Text)
                 {
                     MessageBox.Show("Bạn cần chọn bàn khác " + (cbPutTogether.SelectedItem as Table).NameTable + " để chuyển bàn", "Thao tác chưa đúng");

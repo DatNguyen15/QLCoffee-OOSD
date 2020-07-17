@@ -403,9 +403,9 @@
             this.XuatHoaDon.BackColor = System.Drawing.Color.YellowGreen;
             this.XuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.XuatHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XuatHoaDon.Location = new System.Drawing.Point(432, 305);
+            this.XuatHoaDon.Location = new System.Drawing.Point(429, 305);
             this.XuatHoaDon.Name = "XuatHoaDon";
-            this.XuatHoaDon.Size = new System.Drawing.Size(116, 45);
+            this.XuatHoaDon.Size = new System.Drawing.Size(122, 45);
             this.XuatHoaDon.TabIndex = 10;
             this.XuatHoaDon.Text = "Xuất Hóa Đơn";
             this.XuatHoaDon.UseVisualStyleBackColor = false;

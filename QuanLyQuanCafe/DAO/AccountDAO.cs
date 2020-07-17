@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyQuanCafe.Builder;
 
 namespace QuanLyQuanCafe.DAO
 {
@@ -50,14 +51,15 @@ namespace QuanLyQuanCafe.DAO
             }
             return null;
         }
+
         public DataTable GetListAccount()
         {
             string query = "select userName, displayName , type from dbo.Account ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool InsertAccount(string name, string displayName, int type)
+        public bool InsertAccount(ControllerNhanSu ctnhansu)
         {
-            string query = string.Format("INSERT dbo.Account ( UserName, DisplayName, Type )VALUES  ( N'{0}', N'{1}', {2})", name, displayName, type);
+            string query = string.Format("INSERT dbo.Account ( UserName, DisplayName, Type )VALUES  ( N'{0}', N'{1}', {2})", ctnhansu.username, ctnhansu.displayname, ctnhansu.type);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

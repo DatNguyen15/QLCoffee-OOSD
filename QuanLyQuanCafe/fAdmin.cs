@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.IO;
 using Microsoft.Office.Interop.Excel;
+using QuanLyQuanCafe.Builder;
 
 
 
@@ -126,17 +127,33 @@ namespace QuanLyQuanCafe
 
             return listFood;
         }
-        void AddAccount(string userName, string displayName, int type)
+        void AddAccount(string userName, string displayName)
         {
             try
             {
-                if (AccountDAO.Instance.InsertAccount(userName, displayName, type))
+                //if (AccountDAO.Instance.InsertAccount(userName, displayName, type))
+                //{
+                //    MessageBox.Show("Mật khẩu mặc định là:  1503", "Thêm thành công");
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Thêm tài khoản thất bại", "Thất bại");
+                //}
+                if (numericUpDown1.Value == 1)
                 {
+                    NhanSuBuilderDirectory builderDirectory = new NhanSuBuilderDirectory();
+                    QuanLyBuilder quanLyBuilder = new QuanLyBuilder();
+                    ControllerNhanSu quanly = builderDirectory.Construct(quanLyBuilder, userName, displayName);
+                    AccountDAO.Instance.InsertAccount(quanly);
                     MessageBox.Show("Mật khẩu mặc định là:  1503", "Thêm thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm tài khoản thất bại", "Thất bại");
+                    NhanSuBuilderDirectory builderDirectory = new NhanSuBuilderDirectory();
+                    NhanVienBuilder nhanvienBuilder = new NhanVienBuilder();
+                    ControllerNhanSu nhanvien = builderDirectory.Construct(nhanvienBuilder, userName, displayName);
+                    AccountDAO.Instance.InsertAccount(nhanvien);
+                    MessageBox.Show("Mật khẩu mặc định là:  1503", "Thêm thành công");
                 }
             }
             catch (Exception)
@@ -238,7 +255,7 @@ namespace QuanLyQuanCafe
             string userName = txbUserName.Text;
             string displayName = txbDisplayName.Text;
             int type = (int)numericUpDown1.Value;
-            AddAccount(userName, displayName, type);
+            AddAccount(userName, displayName);
             Refresh();
         }
         private void txbSearchFoodName_KeyPress(object sender, KeyPressEventArgs e)
@@ -443,7 +460,7 @@ namespace QuanLyQuanCafe
         }
         bool verif()
         {
-            if ((txtFirstname.Text.Trim() == "") || (txtLastname.Text.Trim() == "") || (txtAddress.Text.Trim() == "") || (txtPhone.Text.Trim() == "") || (pictureBoxMember.Image == null))
+            if ((txtFirstname.Text.Trim() == "") || (txtLastname.Text.Trim() == "") || (txtAddress.Text.Trim() == "") || (txtPhone.Text.Trim() == "") || (pictureBoxMember.Image == null ))
             {
                 return false;
             }

@@ -14,6 +14,7 @@ namespace QuanLyQuanCafe.DAO
         MY_DB myDB = new MY_DB();
         public bool InsertMember(string id,string fname,string lname,string gender,DateTime bdate,string adrs,string phone,MemoryStream pic,string username)
         {
+
                 SqlCommand command = new SqlCommand("insert into Member (Id,FirstName,LastName, Gender, BirthDate,Address,Phone ,Picture,username)" +
                  " values (@id,@fn,@ln,@gdr,@bdt,@adrs,@phn,@pic,@user)", myDB.getConnection);
                 command.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;

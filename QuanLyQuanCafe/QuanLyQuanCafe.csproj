@@ -75,6 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\ControllerNhanSu.cs" />
+    <Compile Include="Builder\NhanSuBuilder.cs" />
+    <Compile Include="Builder\NhanSuBuilderDirectory.cs" />
+    <Compile Include="Builder\NhanVienBuilder.cs" />
+    <Compile Include="Builder\QuanLyBuilder.cs" />
     <Compile Include="clsNotification.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BillDAO.cs" />
