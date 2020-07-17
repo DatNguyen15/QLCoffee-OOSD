@@ -78,7 +78,7 @@ namespace QuanLyQuanCafe
                     Button bt = new Button() { Width = Table.width, Height = Table.height };
                     StatePattern.TableContext context = new StatePattern.TableContext();
                     context.setState(item.StatusTable);
-                    // if (context.AppleState()) item.StatusTable = "Trống";
+                    // if (item.StatusTable()) item.StatusTable = "Trống";
                     bt.Text = item.NameTable + Environment.NewLine + item.StatusTable;
                     //Show bill by a click on the button:
                     bt.Click += Bt_Click;
@@ -364,10 +364,12 @@ namespace QuanLyQuanCafe
                             //string saveExcelFile = @"D:\excel_report.xlsx";
                             BillDAO.Instance.CheckOut(idBill, discount, finalyTotalPrice);
                             ShowBill(tb.ID);
+                            Refresh();
                         }
                     }
                     else
                     {
+                        
                         if (MessageBox.Show(string.Format("Bạn muốn thanh toán hóa đơn {0}?", tb.NameTable, discount), "Thanh toán thành công", MessageBoxButtons.OKCancel) == DialogResult.OK)
                         {
 
@@ -560,6 +562,10 @@ namespace QuanLyQuanCafe
                 btnDiscount.Visible = false;
                 nmUDdiscount.Visible = false;
             }
+        }
+        public void Refresh()
+        {
+            nmUDdiscount.Value = 0;
         }
     }
 }

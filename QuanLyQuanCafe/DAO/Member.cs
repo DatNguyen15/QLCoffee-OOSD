@@ -96,7 +96,9 @@ namespace QuanLyQuanCafe.DAO
             DataTable table = new DataTable();
             adap.Fill(table);
             return table;
-        } 
+        }
+
+      
 
     }
 }

@@ -31,6 +31,7 @@ namespace QuanLyQuanCafe
         BindingSource tableList = new BindingSource();
         public Account loginAccount;
         #endregion
+        MY_DB myDB = new MY_DB();
 
         Member member = new Member();
         public fAdmin()
@@ -273,10 +274,16 @@ namespace QuanLyQuanCafe
         }
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            string userName = txbUserName.Text;
-           
-            DeleteAccount(userName);
-            Refresh();
+            try
+            {
+                string userName = txbUserName.Text;
+
+                DeleteAccount(userName);
+                Refresh();
+            }catch
+            {
+                MessageBox.Show("Error", " Delete Member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnViewBills_Click(object sender, EventArgs e)
         {
@@ -506,11 +513,12 @@ namespace QuanLyQuanCafe
             {
                 MessageBox.Show("Empty Fields", "Edit Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
+            
         }
         private void Refresh()
         {
-                MY_DB myDB = new MY_DB();
+               
                 SqlCommand command = new SqlCommand("select Id, FirstName, LastName, Gender, BirthDate, Address, Phone , Picture, username  from Member", myDB.getConnection);
                 SqlDataAdapter adap = new SqlDataAdapter(command);
                 System.Data.DataTable table = new System.Data.DataTable();
@@ -550,46 +558,65 @@ namespace QuanLyQuanCafe
         }
         private void buttonAddMember_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text;
-            string fname = txtFirstname.Text;
-            string lname = txtLastname.Text;
-            DateTime bdate = dateTimePicker1.Value;
-            string phone = txtPhone.Text;
-            string adrs = txtAddress.Text;
-            string gender = "Male";
-            string username = (string) comboBox1.SelectedValue;
-            if (radioButtonFemale.Checked)
+
+
+            MY_DB db = new MY_DB();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            System.Data.DataTable table = new System.Data.DataTable();
+            SqlCommand command = new SqlCommand("Select * From Member WHERE @ID= Id", db.getConnection);
+            command.Parameters.Add("@ID", SqlDbType.VarChar).Value = txtId.Text;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if ((table.Rows.Count) > 0)
             {
-                gender = "Female";
+                MessageBox.Show("Trùng ID rồi!!!", " Nhập lại ID.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
             }
-
-            MemoryStream pic = new MemoryStream();
-
-            if (verif())
+            else
             {
-                pictureBoxMember.Image.Save(pic, pictureBoxMember.Image.RawFormat);
-                if (AccountDAO.Instance.GetAccountByUserName(username)!=null)
+
+                string id = txtId.Text;
+                string fname = txtFirstname.Text;
+                string lname = txtLastname.Text;
+                DateTime bdate = dateTimePicker1.Value;
+                string phone = txtPhone.Text;
+                string adrs = txtAddress.Text;
+                string gender = "Male";
+                string username = (string)comboBox1.SelectedValue;
+                if (radioButtonFemale.Checked)
                 {
-                    if (member.InsertMember(id, fname, lname, gender, bdate, adrs, phone, pic, username))
+                    gender = "Female";
+                }
+
+                MemoryStream pic = new MemoryStream();
+
+                if (verif())
+                {
+                    pictureBoxMember.Image.Save(pic, pictureBoxMember.Image.RawFormat);
+                    if (AccountDAO.Instance.GetAccountByUserName(username) != null)
                     {
-                        Refresh();
-                        Clear();
-                        MessageBox.Show("Thêm thành công");
+                        if (member.InsertMember(id, fname, lname, gender, bdate, adrs, phone, pic, username))
+                        {
+                            Refresh();
+                            Clear();
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error", "Add Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error", "Add Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Sai tên tài khoản hoặc chưa tạo tài khoản!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên tài khoản hoặc chưa tạo tài khoản!");
+                    MessageBox.Show("Empty Fields", "Add Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Empty Fields", "Add Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -624,7 +651,8 @@ namespace QuanLyQuanCafe
             form.ShowDialog();
             this.Show();
         }
+       
 
-        
+
     }
 }
