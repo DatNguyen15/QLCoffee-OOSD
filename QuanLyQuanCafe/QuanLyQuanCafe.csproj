@@ -135,10 +135,10 @@
     <Compile Include="StatePattern\State.cs" />
     <Compile Include="StatePattern\TableContext.cs" />
     <Compile Include="StatePattern\TrongState.cs" />
-    <Compile Include="StrateryPattern\BinhThuong.cs" />
-    <Compile Include="StrateryPattern\PayList.cs" />
-    <Compile Include="StrateryPattern\PayStratery.cs" />
-    <Compile Include="StrateryPattern\ThanhVien.cs" />
+    <Compile Include="StrategyPattern\BinhThuong.cs" />
+    <Compile Include="StrategyPattern\PayList.cs" />
+    <Compile Include="StrategyPattern\PayStrategy.cs" />
+    <Compile Include="StrategyPattern\ThanhVien.cs" />
     <EmbeddedResource Include="fAccount.resx">
       <DependentUpon>fAccount.cs</DependentUpon>
     </EmbeddedResource>

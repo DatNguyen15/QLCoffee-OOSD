@@ -332,7 +332,7 @@ namespace QuanLyQuanCafe
         private async void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table tb = lvBill.Tag as Table;
-            StrateryPattern.PayList pay = new StrateryPattern.PayList();
+            StrategyPattern.PayList pay = new StrategyPattern.PayList();
             try
             {
                 int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(tb.ID);
@@ -340,12 +340,12 @@ namespace QuanLyQuanCafe
                 if (checkBox1.Checked)
                 {
                     
-                    pay.setPay(new StrateryPattern.ThanhVien());
+                    pay.setPay(new StrategyPattern.ThanhVien());
 
                 }
                 else
                 {
-                    pay.setPay(new StrateryPattern.BinhThuong());
+                    pay.setPay(new StrategyPattern.BinhThuong());
                 }
                 float finalyTotalPrice = pay.pay(TTP,discount);    // TTP - (TTP / 100) * discount;
 
@@ -526,14 +526,14 @@ namespace QuanLyQuanCafe
                     {
 
                         await tw.WriteLineAsync(btnTableChooseCurrent.Text);
-                        await tw.WriteLineAsync("            Tên món           " + " " + "   Số lượng   "            + " " + "Giá"                 + " " + "  Thành tiền");
+                        await tw.WriteLineAsync("            Tên món           " + "   " + "   Số lượng   "            + "         " + "Giá"             + "            " + "  Thành tiền");
                         foreach (ListViewItem item in lvBill.Items)
                         { 
-                            await tw.WriteLineAsync(item.SubItems[0].Text+ "    " + item.SubItems[1].Text + "    " + item.SubItems[2].Text + "    " + item.SubItems[3].Text );
+                            await tw.WriteLineAsync( "            "+ item.SubItems[0].Text+ "                       " + item.SubItems[1].Text + "                    " + item.SubItems[2].Text + "              " + item.SubItems[3].Text );
                             await tw.WriteLineAsync("--------------------------------------------------------------- ");
                         }
                         await tw.WriteLineAsync("                        Tổng tiền (chưa giảm giá):   "+ txbTotalPrice.Text +"VND");
-                        await tw.WriteLineAsync("                   Giảm giá:       " + nmUDdiscount.Text +"%");
+                        await tw.WriteLineAsync("                        Giảm giá:       " + nmUDdiscount.Text +"%");
                         await tw.WriteLineAsync("                        Tổng tiền (sau giảm giá):   " + finalyTotalPrice +"VND");
                         MessageBox.Show("Hoa don da xuat", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

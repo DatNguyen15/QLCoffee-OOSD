@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.StrateryPattern
+namespace QuanLyQuanCafe.StrategyPattern
 {
-    interface PayStratery
+    interface PayStrategy
     {
         float TinhTien(float tien, int discount);
     }

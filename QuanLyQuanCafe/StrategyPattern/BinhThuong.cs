@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.StrateryPattern
+namespace QuanLyQuanCafe.StrategyPattern
 {
-    class BinhThuong : PayStratery
+    class BinhThuong : PayStrategy
     {
         public float TinhTien(float tien, int discount)
         {
