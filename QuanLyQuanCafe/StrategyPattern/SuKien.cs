@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyQuanCafe.StrategyPattern
 {
-    class ThanhVien : PayStrategy
+    class SuKien : PayStrategy
     {
         public float TinhTien(float tien, int discount)
         {

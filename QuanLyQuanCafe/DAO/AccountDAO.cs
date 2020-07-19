@@ -12,9 +12,10 @@ namespace QuanLyQuanCafe.DAO
 {
     public class AccountDAO
     {
-        private static AccountDAO instance;
+        private static AccountDAO instance; // khỏi tạo 1 unitinstance
 
-        public static AccountDAO Instance
+
+        public static AccountDAO Instance// dùng để lấy instan
         {
             get
             {
@@ -27,6 +28,7 @@ namespace QuanLyQuanCafe.DAO
                 instance = value;
             }
         }
+        // dùng đảm bảo chỉ có 1 AccountDAO
         private AccountDAO() { }
         public bool checkLogin(string userName, string passWord)
         {

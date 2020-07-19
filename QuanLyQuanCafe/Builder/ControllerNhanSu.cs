@@ -8,6 +8,7 @@ namespace QuanLyQuanCafe.Builder
 {
     public class ControllerNhanSu
     {
+        //parameter của Nhân sự
         public string username { get; set; }
         public string displayname { get; set; }
         public int type { get; set; }

@@ -340,7 +340,7 @@ namespace QuanLyQuanCafe
                 if (checkBox1.Checked)
                 {
                     
-                    pay.setPay(new StrategyPattern.ThanhVien());
+                    pay.setPay(new StrategyPattern.SuKien());
 
                 }
                 else

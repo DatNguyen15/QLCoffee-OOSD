@@ -138,7 +138,7 @@
     <Compile Include="StrategyPattern\BinhThuong.cs" />
     <Compile Include="StrategyPattern\PayList.cs" />
     <Compile Include="StrategyPattern\PayStrategy.cs" />
-    <Compile Include="StrategyPattern\ThanhVien.cs" />
+    <Compile Include="StrategyPattern\SuKien.cs" />
     <EmbeddedResource Include="fAccount.resx">
       <DependentUpon>fAccount.cs</DependentUpon>
     </EmbeddedResource>

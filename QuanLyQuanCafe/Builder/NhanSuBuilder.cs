@@ -8,6 +8,7 @@ namespace QuanLyQuanCafe.Builder
 {
     public interface NhanSuBuilder
     {
+        //tạo các function 
         void SetUserName(string UserName);
         void SetDisplayName(string DisplayName);
       

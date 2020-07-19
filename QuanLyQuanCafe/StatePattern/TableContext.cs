@@ -19,7 +19,6 @@ namespace QuanLyQuanCafe.StatePattern
         public bool AppleState()
         {
            return state.handleRequest();
-
         }
 
     }
